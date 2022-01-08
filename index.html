@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Minesweeper is live!</title>
+</head>
+<body>
+    
+    <div id="form">
+        <label for="fname"># Rows:</label>
+        <input type="number" id="rows" placeholder=9 required><br><br>
+        <label for="lname"># Columns:</label>
+        <input type="number" id="cols" placeholder=9 required><br><br>
+        <button id="start">Start</button>
+        <p>Insert number of rows and columns first. Click the "Start" button 
+            and you can start playing Minesweeper 😆.</p>
+    </div>
+    
+        
+  <div id="canvas" style="display: none"></div>
+  <button id="restart">Restart</button>
+  <script src="minesweeper.js"></script>
+  <style>
+    * {
+      font-weight: bold;
+    }
+    #restart {
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+</body>
