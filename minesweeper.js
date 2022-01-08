@@ -177,7 +177,14 @@ function getNeighbors(key) {
 }
 
 function generateBombs() {
-    let count = Math.round(1/9*ROWS*COLS)
+    let count = Math.round(1/9*ROWS*COLS);
+    
+    const newDiv = document.createElement("div");
+    const newContent = document.createTextNode(`There are ${count} bombs to diffuse. In order to win, you need to find all the cells without bombs inside. Good luck!`);
+    newDiv.appendChild(newContent);
+    // document.body.insertAdjacentElement(newDiv, canvas);
+    canvas.insertAdjacentElement("afterend", newDiv);
+
     let bombs = []
     let allKeys = []
     for (let i = 0; i<ROWS; i++) {
